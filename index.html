@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="icon" href="nestjs.svg" type="image/svg+xml">
+  </head>
+  <body>
+    <main>
+      <h1>Calculadora</h1>
+      <section id="calculadora-container">
+        <header id="screen-container">
+          <output id="screen" aria-live="polite">0</output>
+        </header>
+        <footer id="keyboard">
+          <section id="values-container">
+            <button type="button" onclick="updateScreen('9')" value="9" >9</button>
+            <button type="button" onclick="updateScreen('8')" value="8" >8</button>
+            <button type="button" onclick="updateScreen('7')" value="7" >7</button>
+            <button type="button" onclick="updateScreen('6')" value="6" >6</button>
+            <button type="button" onclick="updateScreen('5')" value="5" >5</button>
+            <button type="button" onclick="updateScreen('4')" value="4" >4</button>
+            <button type="button" onclick="updateScreen('3')" value="3" >3</button>
+            <button type="button" onclick="updateScreen('2')" value="2" >2</button>
+            <button type="button" onclick="updateScreen('1')" value="1" >1</button>
+            <button type="button" onclick="updateScreen('0')" value="0" >0</button>
+            <button type="button" onclick="updateScreen('.')" value="." >.</button>
+          </section>
+          <aside>
+            <button type="button" onclick="updateScreen('/')" value="/">/</button>
+            <button type="button" onclick="updateScreen('*')" value="*">*</button>
+            <button type="button" onclick="updateScreen('^')" value="^">^</button>
+            <button type="button" onclick="updateScreen('-')" value="-">-</button>
+            <button type="button" onclick="updateScreen('+')" value="+">+</button>
+            <button type="button" onclick="updateScreen('=')" value="=">=</button>
+            <button type="button" onclick="updateScreen('+/-')" value="+/-">+/-</button>
+            <button type="button" onclick="updateScreen('C')" value="C">C</button>
+            <button type="button" onclick="updateScreen('AC')" value="AC">AC</button>
+          </aside>
+        </footer>
+      </section>
+      <aside id="logger-container">
+        <label for="logger">Registro</label>
+        <textarea name="logger" id="logger"> </textarea>
+      </aside>
+    </main>
+
+    <script defer type="module" src="/src/main.ts"></script>
+  </body>
+</html>
